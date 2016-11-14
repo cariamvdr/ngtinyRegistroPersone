@@ -1,4 +1,4 @@
-var app = angular.module('ngschool', ['ngRoute','ui.grid']);
+var app = angular.module('ngschool', ['ngRoute','ui.grid','ui.grid.edit', 'ui.grid.rowEdit', 'ui.grid.cellNav']);
 app.conf=function ($routeProvider) { 
   $routeProvider 
     .when('/', { 
@@ -13,6 +13,10 @@ app.conf=function ($routeProvider) {
       templateUrl: 'views/persone.html' 
     }) 
     .when('/opzioni', { 
+      controller: 'OpzioniController', 
+      templateUrl: 'views/opzioni.html' 
+    })
+    .when('/opzioni/:opz', { 
       controller: 'OpzioniController', 
       templateUrl: 'views/opzioni.html' 
     })	
